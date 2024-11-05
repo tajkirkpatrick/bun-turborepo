@@ -1,13 +1,13 @@
-import { PORT } from "@repo/constants";
+import { PORT } from '@repo/constants'
 
 export function getBaseUrl() {
-    if (typeof window !== 'undefined') {
-        return window.location.origin;
-    }
+  if (typeof window !== 'undefined') {
+    return window.location.origin
+  }
 
-    if (process.env['VERCEL_URL']) {
-        return `https://${process.env['VERCEL_URL']}`;
-    }
+  if (import.meta.env.VITE_VERCEL_URL) {
+    return `https://${import.meta.env.VITE_VERCEL_URL}`
+  }
 
-    return `http://localhost:${PORT}}`;
+  return `http://localhost:${PORT}}`
 }
