@@ -1,0 +1,27 @@
+{
+  "name": "@repo/constants",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": {
+      "types": "./dist/constants.d.ts",
+      "default": "./dist/constants.js"
+    }
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.8.0",
+    "eslint": "^9.14.0",
+    "eslint-plugin-format": "^0.1.2"
+  }
+}
